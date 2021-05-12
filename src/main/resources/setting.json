@@ -1,0 +1,15 @@
+ {
+   "serverPort" : 8080,
+   "clientPool" : 50,
+   "rootDirectoryName" : "view",
+   "httpHostList" : [
+     {
+       "host" : "localhost",
+       "directoryName" : "hostA"
+     },
+     {
+       "host" : "127.0.0.1",
+       "directoryName" : "hostB"
+     }
+   ]
+ }
