@@ -28,26 +28,23 @@ public class SettingUtil {
 			JSONParser jsonParser = new JSONParser();
 			jsonObject = (JSONObject) jsonParser.parse(bufferedReader);
 		} catch (IOException e) {
-			log.error("setting.json ÀÐ±â ½ÇÆÐ");
+			log.error("setting.json ï¿½Ð±ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		} catch (ParseException e) {
-			log.error("setting.json ÀÐ±â ½ÇÆÐ");
+			log.error("setting.json ï¿½Ð±ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		}
 		return jsonObject;
 	}
 	
-	//¼­¹ö Æ÷Æ® ¹ÝÈ¯
 	public static Long getServerPort() {
 		JSONObject settingJsonObject = readServerSetting();
 		return (Long) settingJsonObject.get("serverPort");
 	}
 	
-	//ÃÖ´ë ¾²·¹µå Ç® ¹ÝÈ¯
 	public static Long getClientThreadPoolCount() {
 		JSONObject settingJsonObject = readServerSetting();
 		return (Long) settingJsonObject.get("clientPool");
 	}
 	
-	//view ·çÆ® µð·ºÅä¸® ¸í
 	public static String getRootDirectoryName() {
 		JSONObject settingJsonObject = readServerSetting();
 		return (String) settingJsonObject.get("rootDirectoryName");
